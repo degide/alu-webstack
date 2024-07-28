@@ -41,11 +41,11 @@ frontend  app-frontend-http
         default_backend app-backend
 
 frontend app-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.app.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.egideharerimana.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend app-backend
 
 backend app-backend
         balance roundrobin
-        server 6133-web-01 54.82.230.220:80 check
-        server 6133-web-02 18.208.245.207:80 check
+        server 6133-web-01 184.72.126.200:80 check
+        server 6133-web-02 3.90.33.154:80 check
